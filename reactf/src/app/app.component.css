@@ -1,0 +1,15 @@
+.d-flex{
+    display: flex;
+    height: 100vh;
+}
+.test{
+    width: 75%;
+}
+.content{
+    overflow: auto;
+    width: 100%;
+}
+.contentmain{
+    width: 70%;
+    margin: 0 auto;
+}    

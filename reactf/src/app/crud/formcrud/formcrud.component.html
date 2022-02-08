@@ -1,0 +1,81 @@
+<form [formGroup]="FormValue" (ngSubmit)="onSubmit()">
+    <legend>
+        <h2>FORM :&nbsp;&nbsp; </h2>
+    </legend><br>
+        <div class="form-group">
+            <label>First Name</label>
+            <input
+              type="text"
+              formControlName="firstname"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f['firstname'].errors }"
+            />
+            <div *ngIf="submitted && f['firstname'].errors" class="invalid-feedback alert alert-danger">
+              <div *ngIf="f['firstname'].errors['required']">Firstname is required</div>
+            </div>
+          </div> <br>
+
+        <div class="form-group">
+            <label>Last Name</label>
+            <input
+              type="text"
+              formControlName="lastname"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f['lastname'].errors }"
+            />
+            <div *ngIf="submitted && f['lastname'].errors" class="invalid-feedback alert alert-danger">
+              <div *ngIf="f['lastname'].errors['required']">Lastname is required</div>
+            </div>
+          </div> <br>
+
+        <div class="form-group">
+            <label for="email">Email : &nbsp;</label>
+            <input
+                type="text"
+                formControlName="email"
+                id="email"
+                class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+                >
+            <div *ngIf="(f['email'].touched || submitted) && f['email'].invalid" class="alert alert-danger">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                <div *ngIf="f['email'].errors && f['email'].errors['email']">Please, enter valid email address.</div>
+            </div>
+        </div><br>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number : &nbsp;</label>
+            <input
+                formControlName="contact"
+                id="contact"
+                type="text"
+                class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['contact'].errors }">
+            <div *ngIf="(f['contact'].touched || submitted) && f['contact'].invalid" class="alert alert-danger">
+                <div *ngIf="f['contact'].errors && f['contact'].errors['required']">Contact is required.</div>
+            </div>
+        </div><br>
+
+        <div>
+            <label for="gender">Gender :&nbsp; &nbsp; </label>
+            <input type="radio" formControlName="gender" id="male" name="gender" value="male">
+            <label for="male">Male &nbsp; </label>
+            <input type="radio" formControlName="gender" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+        </div><br>
+
+
+        <label for="date">Date of Employment :&nbsp; &nbsp; </label>
+        <input type="date" id="date" formControlName="doe" value="date"><br><br>
+
+        <label for="dept">Department :&nbsp; &nbsp; </label>
+        <select formControlName="dept" name="Department" id="dept">
+            <option *ngFor="let deptvar of department" [value]="deptvar.id">
+                {{deptvar.name}}
+            </option>
+        </select><br><br>
+
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <button type="reset" class="btn btn-success">Reset</button>
+      
+</form>

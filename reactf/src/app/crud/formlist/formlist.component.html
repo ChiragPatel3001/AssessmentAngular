@@ -1,0 +1,43 @@
+<div class="d-flex">
+<div class="test d-flex">
+    <button class="btn add-user" routerLink="/crud/formcrud"> <strong> Add User </strong></button>
+ </div>
+ <div class="search-bar d-flex">
+      <input class="Search"
+       type="text"
+       placeholder="Search.."
+       name="search"
+       [(ngModel)]="searchText"
+      >
+ </div>
+ </div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Date of Employment</th>
+            <th scope="col">Department</th>
+            <th scope="col">PhoneNumber</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let formData of fromList | formcrudfilter: searchText">
+            <td>{{formData.id}}</td>
+            <td>{{formData.firstname + " " + formData.lastname}}</td>
+            <td>{{formData.email}}</td>
+            <td>{{formData.gender}}</td>
+            <td>{{formData.doe}}</td>
+            <td>{{formData.dept | deptpipe: department}}</td>
+            <td>{{formData.contact}}</td>
+            
+            <td>
+                <button class="btn btn-success" routerLink="/crud/edit/{{formData.id}}">Edit</button>
+                <button class="btn btn-danger mx-3" (click)="deleteData(formData.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

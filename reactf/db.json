@@ -1,0 +1,70 @@
+{
+  "department": [
+    {
+      "id": 1,
+      "name": "FrontEnd"
+    },
+    {
+      "id": 2,
+      "name": ".Net"
+    },
+    {
+      "id": 3,
+      "name": "UI/UX"
+    },
+    {
+      "id": 4,
+      "name": "QA"
+    },
+    {
+      "id": 5,
+      "name": "Database"
+    },
+    {
+      "id": 6,
+      "name": "Android"
+    }
+  ],
+  "users": [
+    {
+      "firstname": "Chirag",
+      "lastname": "Patel",
+      "email": "cp221740@gmail.com",
+      "contact": "7874543474",
+      "gender": "male",
+      "doe": "2022-01-03",
+      "dept": 1,
+      "id": 1
+    },
+    {
+      "firstname": "Abhishek",
+      "lastname": "Patel",
+      "email": "abhlohshake@gmail.com",
+      "contact": "8658555555",
+      "gender": "male",
+      "doe": "2022-01-03",
+      "dept": 1,
+      "id": 2
+    },
+    {
+      "firstname": "Neel",
+      "lastname": "Gajjar",
+      "email": "neelu123@gmail.com",
+      "contact": "9824776589",
+      "gender": "male",
+      "doe": "2022-02-10",
+      "dept": 4,
+      "id": 4
+    },
+    {
+      "firstname": "Dummy",
+      "lastname": "girl",
+      "email": "dummygirl52@gmail.com",
+      "contact": "9292454575",
+      "gender": "female",
+      "doe": "2022-02-05",
+      "dept": 5,
+      "id": 5
+    }
+  ]
+}
