@@ -8,12 +8,14 @@ import { CrudModule } from './crud/crud.module';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { NgxMaskModule } from 'ngx-mask';
+import { ResumebuilderModule } from './modules/resumebuilder/resumebuilder.module';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     CrudModule,
     HttpClientModule,
     Ng2SearchPipeModule,
-    FormsModule
+    FormsModule,
+    NgxMaskModule,
+    ResumebuilderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

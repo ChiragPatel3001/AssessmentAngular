@@ -8,7 +8,8 @@ const routes: Routes = [
   {
     path: 'crud',
     loadChildren: () => import('./crud/crud.module').then((m) => m.CrudModule)
-  }
+  },
+  { path: 'resume', loadChildren: () => import('./modules/resumebuilder/resumebuilder.module').then(m => m.ResumebuilderModule) }
 ];
 
 @NgModule({

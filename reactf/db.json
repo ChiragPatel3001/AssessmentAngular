@@ -66,5 +66,49 @@
       "dept": 5,
       "id": 5
     }
+  ],
+  "resumeinfo": [
+    {
+      "id":1,
+      "firstName": " string",
+      "designation": "string",
+      "contact": 7898745658,
+      "profiledesc": "string",
+      "email": "string",
+      "techskills": [
+        "skill-1",
+        "skill-2",
+        "skill-3"
+      ],
+      "experience": [
+        {
+          "WorkplaceInfo": "string",
+          "designationInfo": "string",
+          "descriptionInfo": "string",
+          "startYearinfo": "number",
+          "EndYearinfo": "number",
+          "aboutExp": "string"
+        },
+        {
+          "WorkplaceInfo": "string",
+          "designationInfo": "string",
+          "descriptionInfo": "string",
+          "startYearinfo": "number",
+          "EndYearinfo": "number"
+        }
+      ],
+      "educationInfo": [
+        {
+          "UniversityInfo": "string",
+          "degree": "string",
+          "grade": "string"
+        },
+        {
+          "UniversityInfo": "string",
+          "degree": "string",
+          "grade": "string"
+        }
+      ]
+    }
   ]
-}
+}  

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Department, User } from '../Model/crud.model';
 import { CrudserveService } from '../services/crudserve.service';
@@ -42,11 +42,12 @@ export class FormcrudComponent implements OnInit {
       contact : ['',[Validators.maxLength(10),Validators.required,Validators.minLength(10)]],
       gender : ['',Validators.required],
       doe : [''],
-      dept : ['FrontEnd']
-      
+      dept : ['FrontEnd'],
      }
      )
   }
+
+
   get f() { return this.FormValue.controls; }
 
   getdata(){

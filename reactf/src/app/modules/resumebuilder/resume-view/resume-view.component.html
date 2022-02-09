@@ -1,0 +1,108 @@
+    <section>
+        <!-- Header Section  -->
+        <table>
+            <tr>
+                <td style="text-align: left; width: 80%;">
+                    <h1>{{ this.resumeDetail.firstName }} </h1>
+                    <h4> <em>{{ this.resumeDetail.designation }}</em></h4>
+                </td>
+                <td style="text-align: left; line-height: 10px;">
+                    <button style="margin-top: 40px;"> Download PDF</button>
+                    <p><a href="mailto:{{ this.resumeDetail.email }}" style="color: red;">{{ this.resumeDetail.email }}</a></p>
+                
+                    <h4>{{ this.resumeDetail.contact }}</h4>
+                    
+                </td>
+            </tr>
+        </table>
+
+        <!-- Profile Section  -->
+        <table>
+            <tr>
+                <td style="width: 180px; vertical-align: top;"> Profile </td>
+                <td>{{ this.resumeDetail.profiledesc }}</td>
+            </tr>
+        </table>
+
+        <!-- Skills Section  -->
+        <table>
+            <tr>
+                <td style="width: 180px;">Skills</td>
+                <td>
+                    <h3> Web Design</h3>
+                </td>
+                <td>
+                    <h3>Interface Design</h3>
+                </td>
+                <td>
+                    <h3>Project Direction</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam explicabo praesentium rem officia
+                    magnam modi temporibus numquam quam sunt perspiciatis.</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi impedit provident cupiditate a
+                    corporis. Ducimus autem est beatae assumenda doloribus.</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam vero molestias atque doloremque aliquam
+                    deleniti in asperiores accusamus, quae sit?</td>
+            </tr>
+        </table>
+
+        <!-- Technical Section   -->
+        <table>
+            <tr>
+                <td style="width: 180px; vertical-align: top;"> Technical</td>
+                <td>
+                    <table style="border-bottom: none; padding: 0; border-collapse: collapse;">
+                        <tr style="border-bottom: 1px solid #dddddd;" *ngFor=" let techskills of this.resumeDetail.techskills">
+                            <td style="width: 200px;">{{techskills}}</td>
+                            <td style="width: 200px;">{{techskills}}</td>
+                            <td>{{techskills}}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Experience Section  -->
+        <table>
+            <tr>
+                <td style="width: 180px; vertical-align: top;padding-top: 6px;">Experience</td>
+                <td>
+                    <table style="vertical-align: top; padding: 0%;" *ngFor=" let experience of this.resumeDetail.experience">
+                        <tr>
+                            <td style="width: 530px;vertical-align: top;">
+                                <h3>{{experience.WorkplaceInfo}}</h3>
+                        <p style="margin: 0%;">
+                            <b>{{experience.designationInfo}}</b>
+                        </p>
+                </td>
+                <td style="vertical-align: top;">{{experience.startYearinfo}}-{{experience.EndYearinfo}}</td>
+            </tr>
+            <tr>
+                <td style="padding-top: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempora amet excepturi nobis
+                    nostrum!</td>
+            </tr>
+        </table>
+        </td>
+        </tr>
+        </table>
+
+        <!-- Education Section  -->
+        <table>
+            <tr>
+                <td style="width: 180px; vertical-align: top;">Education</td>
+                <td *ngFor=" let education of this.resumeDetail.education">
+                    <h3>{{education.UniversityInfo}}</h3>
+                    <p>{{education.degree}} - <b>{{education.grade}}</b></p>
+                </td>
+
+            </tr>
+        </table>
+        <p style="text-align: center;">
+            {{ this.resumeDetail.firstName }} - <a href="mailto:{{ this.resumeDetail.email }}" style="color: red;">{{ this.resumeDetail.email }}</a> -
+            {{ this.resumeDetail.contact }}
+        </p>
+    </section>
