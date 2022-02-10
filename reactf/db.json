@@ -69,46 +69,86 @@
   ],
   "resumeinfo": [
     {
-      "id":1,
-      "firstName": " string",
-      "designation": "string",
-      "contact": 7898745658,
-      "profiledesc": "string",
-      "email": "string",
+      "firstName": "Chirag",
+      "designation": "Frontend Trainee",
+      "contact": "7874543474",
+      "email": "cp221740@gmail.com",
+      "profiledesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when",
       "techskills": [
-        "skill-1",
-        "skill-2",
-        "skill-3"
+        {
+          "techskills": "UI Design"
+        },
+        {
+          "techskills": "front end"
+        },
+        {
+          "techskills": ".Net"
+        }
       ],
       "experience": [
         {
-          "WorkplaceInfo": "string",
-          "designationInfo": "string",
-          "descriptionInfo": "string",
-          "startYearinfo": "number",
-          "EndYearinfo": "number",
-          "aboutExp": "string"
-        },
-        {
-          "WorkplaceInfo": "string",
-          "designationInfo": "string",
-          "descriptionInfo": "string",
-          "startYearinfo": "number",
-          "EndYearinfo": "number"
+          "WorkplaceInfo": "1 Rivet",
+          "designationInfo": "Front-End Development",
+          "descriptionInfo": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+          "startYearinfo": "2022-02-08",
+          "EndYearinfo": "2022-02-23",
+          "aboutExp": ""
         }
       ],
-      "educationInfo": [
+      "education": [
         {
-          "UniversityInfo": "string",
-          "degree": "string",
-          "grade": "string"
+          "UniversityInfo": "UKA Tarsadia University",
+          "degree": "Btech",
+          "grade": "9"
         },
         {
-          "UniversityInfo": "string",
-          "degree": "string",
-          "grade": "string"
+          "UniversityInfo": "HTHS",
+          "degree": "HSC",
+          "grade": "8"
         }
-      ]
+      ],
+      "id": 1
+    },
+    {
+      "firstName": "Chirag",
+      "designation": "Frontend Trainee",
+      "contact": "7874543474",
+      "email": "cp221740@gmail.com",
+      "profiledesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when",
+      "techskills": [
+        {
+          "techskills": "UI Design"
+        },
+        {
+          "techskills": "front end"
+        },
+        {
+          "techskills": ".Net"
+        }
+      ],
+      "experience": [
+        {
+          "WorkplaceInfo": "1 Rivet",
+          "designationInfo": "Front-End Development",
+          "descriptionInfo": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+          "startYearinfo": "2022-02-08",
+          "EndYearinfo": "2022-02-23",
+          "aboutExp": ""
+        }
+      ],
+      "education": [
+        {
+          "UniversityInfo": "UKA Tarsadia University",
+          "degree": "Btech",
+          "grade": "9"
+        },
+        {
+          "UniversityInfo": "HTHS",
+          "degree": "HSC",
+          "grade": "8"
+        }
+      ],
+      "id": 2
     }
   ]
-}  
+}

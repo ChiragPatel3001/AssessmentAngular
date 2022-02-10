@@ -5,9 +5,13 @@ contact : number,
 id: number,
 email : string,
 profiledesc : string,
-techskills : string[],
+techskills : Techskills[],
 experience : Experienceinfo[],
 education : Educationinfo[],
+}
+
+class Techskills{
+    techskills: string;
 }
 
 class Experienceinfo{

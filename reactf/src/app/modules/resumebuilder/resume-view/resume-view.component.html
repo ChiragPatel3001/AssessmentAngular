@@ -1,4 +1,4 @@
-    <section>
+    <section *ngIf="this.resumeDetail">
         <!-- Header Section  -->
         <table>
             <tr>
@@ -56,10 +56,8 @@
                 <td style="width: 180px; vertical-align: top;"> Technical</td>
                 <td>
                     <table style="border-bottom: none; padding: 0; border-collapse: collapse;">
-                        <tr style="border-bottom: 1px solid #dddddd;" *ngFor=" let techskills of this.resumeDetail.techskills">
-                            <td style="width: 200px;">{{techskills}}</td>
-                            <td style="width: 200px;">{{techskills}}</td>
-                            <td>{{techskills}}</td>
+                        <tr style="border-bottom: 1px solid #dddddd;" *ngFor=" let techskill of this.resumeDetail.techskills">
+                            <td style="width: 200px;">{{techskill.techskills}}</td>
                         </tr>
                     </table>
                 </td>

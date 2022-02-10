@@ -52,9 +52,9 @@
                 type="text"
                 class="form-control"
                 [ngClass]="{ 'is-invalid': submitted && (f['contact'].errors)}">
-            <div *ngIf="(f['contact'].touched || submitted) && (f['contact'].invalid)" class="alert alert-danger">
-                <div *ngIf="f['contact'].errors && (f['contact'].errors['required'])">Contact is required.</div>
-                <!-- <div *ngIf="f['contact'].errors?.['maxLength'] || f['contact'].errors?.['minLength']">Enter Valid Value.</div> -->
+            <div *ngIf="(f['contact'].touched || submitted) && (f['contact'].invalid && 
+                  f['contact'].errors?.['maxLength'] || f['contact'].errors?.['minLength'])" class=" alert alert-danger">
+                Enter a Valid contact Number.
                 <!-- <div *ngIf="f['contact'].errors && f['contact'].errors['minLength(10)']">Enter Valid Value.</div> -->
             </div>
         </div><br>

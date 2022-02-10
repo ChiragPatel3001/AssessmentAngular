@@ -36,7 +36,7 @@ export class FormcrudComponent implements OnInit {
   }
   maarufunction(): FormGroup{
      return this.bob.group({
-      firstname : ['',Validators.required],
+      firstname : ['',Validators.required],  
       lastname : ['',Validators.required],
       email : ['',[Validators.required,Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
       contact : ['',[Validators.maxLength(10),Validators.required,Validators.minLength(10)]],

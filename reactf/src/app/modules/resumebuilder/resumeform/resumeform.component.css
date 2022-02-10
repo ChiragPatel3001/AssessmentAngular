@@ -24,6 +24,9 @@ label{
     color: white;
     border-radius: 5px;
 }
+.dskill{
+    margin-left: 25px;
+}
 .btn-primary{
     background-color: #005F73;
     border: none;

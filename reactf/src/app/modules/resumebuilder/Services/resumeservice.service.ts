@@ -14,7 +14,17 @@ export class ResumeserviceService {
   constructor(private http: HttpClient) {
     this.apilink = environment.baseURL
   }
+
   getResumeinfo(id: number):Observable<resumedetails>{
     return this.http.get<resumedetails>(`${this.apilink}/resumeinfo/${id}`)
+  }
+
+
+  saveResumeData(data: resumedetails): Observable<resumedetails> {
+    return this.http.post<resumedetails>(`${this.apilink}/resumeinfo`, data);
+  }
+
+  deleteResumeData(id:number):Observable<number>{
+    return this.http.delete<number>(`${this.apilink}/resumeinfo/${id}`)
   }
 }

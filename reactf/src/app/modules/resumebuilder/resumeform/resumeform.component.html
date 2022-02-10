@@ -1,76 +1,154 @@
-<form>
-    <div class="form-group">
+<form [formGroup]="resumeform" (ngSubmit)="onSubmit()">
+    <div class="form-group" >
         <legend class="Mainf-title"><strong>Resume Information :</strong></legend>
      <div class="form-group">
             <legend><strong> Personal Details : </strong></legend>
             
             <label for="name">Name : &nbsp; &nbsp;</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter Your Name"><br>
+            <input type="text"
+             class="form-control"
+              formControlName="firstName"
+               id="fname"
+                 [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['firstName'].touched }"
+                  placeholder="Enter Your Name"
+                  />
+                  <div *ngIf="resumeSubmitted || getvalue['firstName'].touched && getvalue['firstName']?.errors?.['required']" class="alert alert-danger">
+                    Given Input is Invalid.
+                  </div><br>
 
 
             <label for="designation">Designation : &nbsp; &nbsp;</label>
-            <input type="text" class="form-control" id="designation" placeholder="Enter Your Designation"><br>
+            <input type="text"
+             class="form-control"
+              formControlName="designation"
+               id="designation"
+                [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['designation'].touched }"
+                placeholder="Enter Your Designation"/>
+                <div *ngIf="resumeSubmitted || getvalue['designation'].touched && getvalue['designation']?.errors?.['required']" class="alert alert-danger">
+                    Given Input is Invalid.
+                  </div><br>
 
 
             <label for="contact">Contact Number : &nbsp; &nbsp;</label>
-            <input type="tel" class="form-control" id="contact" placeholder="Enter Your Contact Number"><br>
-
+            <input type="tel"
+             class="form-control"
+              formControlName="contact"
+               id="contact"
+               [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['contact'].touched && getvalue['contact']?.errors?.['maxlength'] && getvalue['contact']?.errors?.['minlength']}"
+               placeholder="Enter Your Contact Number">
+               <div *ngIf="resumeSubmitted || getvalue['contact'].touched && getvalue['contact']?.errors?.['required']" class="alert alert-danger">
+                Given Input is Invalid.
+              </div><br>
 
             <label for="email">Email-Id : &nbsp; &nbsp;</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter Your email (abc@domain.com)"><br>
+            <input type="email"
+             class="form-control"
+              formControlName="email"
+               id="email"
+               [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['email'].touched }"
+               placeholder="Enter Your email (abc@domain.com)">
+               <div *ngIf="resumeSubmitted || getvalue['email'].touched && getvalue['email']?.errors?.['required']" class="alert alert-danger">Given Input is Invalid. </div>
+                <div *ngIf="getvalue['email'].errors && getvalue['email'].touched && getvalue['email']?.errors?.['email']" class="alert alert">Please, enter valid email address.</div>
+              
+
+
+
     
      </div><br>
      <div class="form-group">
          <legend><strong>Profile : </strong></legend>
 
          <label for="profiledesc" style="display: flex;">Profile Description : &nbsp; &nbsp;</label>
-         <textarea rows="4" cols="30" name="profiledesc" class="form-control" style="resize: none; display: flex;">Enter Description here</textarea><br>
-
+         <textarea rows="4"
+          cols="30"
+           name="profiledesc"
+            class="form-control"
+             formControlName="profiledesc"
+              style="resize: none; display: flex;"
+              [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['profiledesc'].touched }"
+               placeholder= "Enter Description here"></textarea>
+               <div *ngIf="resumeSubmitted || getvalue['profiledesc'].touched && getvalue['profiledesc']?.errors?.['required']" class="alert alert-danger">
+                Given Input is Invalid.
+              </div><br>
      </div><br>
 
-     <div class="form-group">
-         <legend><strong>Skills : </strong></legend>
 
-         <label for="skillset">Skill Set : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="skillset" placeholder="Enter Your Skill."><br>
-         <button class="btn btn-primary">+ Add Skill</button>
-     </div><br><br>
 
-     <div class="form-group">
-         <legend><strong>Experience : </strong></legend>
 
-         <label for="workplace">WorkPlace : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="workplace" placeholder="Enter Your WorkPlace Name"><br>
+     <legend><strong>Skills : </strong></legend>
+     <label for="skillset">Skill Set : &nbsp; &nbsp;</label>
+     <div class="form-group" *ngFor="let techSkill of technicalskill.controls; let i = index" formArrayName="techskills">
+         <div [formGroupName]="i">
+    
+             <input type="text"
+              class="form-control"
+               id="skillset"
+                formControlName="techskills"
+                 placeholder="Enter Your Skill."
+                 [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['techskills'].touched }"/>
+                 <div *ngIf="resumeSubmitted || getAsFormGroup(techSkill).controls['techskills'].touched && getAsFormGroup(techSkill).controls['techskills']?.errors?.['required']" class="alert alert-danger">
+                    Given Input is Invalid.
+                  </div><br>
+            </div>
+            <button type="button" (click)="addSkills()" class="btn btn-primary">Add Skill</button>
+            <button type="button" (click)="deleteSkills(i)" class="btn btn-primary dskill">Delete Skill</button><br><br>
+        </div>
 
+
+
+        
+        <legend><strong>Experience : </strong></legend>
+        <div class="form-group" *ngFor="let exper of experience.controls; let i = index" formArrayName="experience">
+            <label for="workplace">WorkPlace : &nbsp; &nbsp;</label>
+            <div [formGroupName]="i">
+
+         <input type="text"
+          class="form-control"
+           id="workplace"
+            formControlName="WorkplaceInfo"
+             placeholder="Enter Your WorkPlace Name"
+             [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['ExperienceInfo'].touched }"/>
+             
+                
 
          <label for="jobtitle">Job-Title : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="jobtitle" placeholder="Enter Job-Title"><br>
+         <input type="text" class="form-control" id="jobtitle" formControlName="designationInfo" placeholder="Enter Job-Title"><br>
 
 
          <label for="jobdesc">Job-Description : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="jobdesc" placeholder="Enter Job-Description"><br>
+         <input type="text" class="form-control" id="jobdesc" formControlName="descriptionInfo" placeholder="Enter Job-Description"><br>
 
 
          <label for="yearofj">Start Year : &nbsp; &nbsp;</label>
-         <input type="date" class="form-control" id="yearofj" placeholder="Enter the Start Year"><br>
+         <input type="date" class="form-control" id="yearofj" formControlName="startYearinfo" placeholder="Enter the Start Year"><br>
          <label for="yearofje">End Year : &nbsp; &nbsp;</label>
-         <input type="date" class="form-control" id="yearofe" placeholder="Enter the End Year"><br>
-
+         <input type="date" class="form-control" id="yearofe"  formControlName="EndYearinfo" placeholder="Enter the End Year"><br>
+        </div>
+            <button type="button" (click)="addExp()" class="btn btn-primary">Add Experience</button>
+            <button type="button" (click)="deleteExp(i)" class="btn btn-primary dskill">Delete Experience</button><br><br>
      </div><br>
 
-     <div class="form-group">
-         <legend><strong>Education : </strong></legend>
+
+
+
+     <legend><strong>Education : </strong></legend>
+     <div class="form-group"  *ngFor="let education of education.controls; let i = index" formArrayName="education">
+        <div [formGroupName]="i">
 
          <label for="uni">University/School Name : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="uni" placeholder="Enter your University/school name"><br>
+         <input type="text" class="form-control" id="uni" formControlName="UniversityInfo" placeholder="Enter your University/school name"><br>
 
          <label for="uni">Degree : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="uni" placeholder="Enter your Degree name"><br>
+         <input type="text" class="form-control" id="uni" formControlName="degree" placeholder="Enter your Degree name"><br>
 
          <label for="uni">Grade : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="uni" placeholder="Enter your grades in CGPA."><br>
+         <input type="text" class="form-control" id="uni" formControlName="grade" placeholder="Enter your grades in CGPA."><br>
+
+        </div>
+        <button type="button" (click)="addEducation()" class="btn btn-primary">Add Education</button>
+            <button type="button" (click)="deleteEducation(i)" class="btn btn-primary dskill">Delete Education</button><br><br>
      </div><br>
 
     </div>
-    <button type="submit" class="btn btn-success d-flex submit">Submit</button>
+    <button type="submit" class="btn btn-success d-flex submit" [disabled]="resumeform.invalid">Submit</button>
   </form>
