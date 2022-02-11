@@ -14,8 +14,8 @@ export class ResumeViewComponent implements OnInit {
   constructor(private resumedetails: ResumeserviceService) { }
 
   ngOnInit(): void {
-    this.resumedetails.getResumeinfo(1).subscribe(data => {
-      this.resumeDetail = data
+    this.resumedetails.getResumeinfo(1).subscribe((data) => {
+      this.resumeDetail = data;
     })
   }
 

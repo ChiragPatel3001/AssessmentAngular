@@ -22,11 +22,12 @@ export class ResumeformComponent implements OnInit {
   }
 
   buildResumeForm() {
+    const emailRegex='^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
     this.resumeform = this.fb.group({
         firstName : ['',Validators.required],
         designation : ['',Validators.required],
         contact : ['',Validators.required],
-        email : ['',[Validators.required,Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+        email : ['',[Validators.required,Validators.email,Validators.pattern(emailRegex)]],
         profiledesc : ['',Validators.required],
         techskills : this.fb.array([this.techSkills()]),
         experience : this.fb.array([this.experienceInfo()]),

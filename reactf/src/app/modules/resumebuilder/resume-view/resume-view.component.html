@@ -1,4 +1,4 @@
-    <section *ngIf="this.resumeDetail">
+    <section *ngIf="this.resumeDetail" class="Form-view">
         <!-- Header Section  -->
         <table>
             <tr>
@@ -103,4 +103,7 @@
             {{ this.resumeDetail.firstName }} - <a href="mailto:{{ this.resumeDetail.email }}" style="color: red;">{{ this.resumeDetail.email }}</a> -
             {{ this.resumeDetail.contact }}
         </p>
+    </section>
+    <section class="to-form">
+        <button class="btn Add-Info" routerLink="/resume/form">Add Form-Info</button>
     </section>

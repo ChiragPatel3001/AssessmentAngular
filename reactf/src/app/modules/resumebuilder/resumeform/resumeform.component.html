@@ -108,21 +108,55 @@
             formControlName="WorkplaceInfo"
              placeholder="Enter Your WorkPlace Name"
              [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['ExperienceInfo'].touched }"/>
-             
+             <div *ngIf="resumeSubmitted || getAsFormGroup(exper).controls['WorkplaceInfo'].touched && getAsFormGroup(exper).controls['WorkplaceInfo']?.errors?.['required']" class="alert alert-danger">
+              Given Input is Invalid.
+            </div>
                 
 
          <label for="jobtitle">Job-Title : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="jobtitle" formControlName="designationInfo" placeholder="Enter Job-Title"><br>
+         <input type="text"
+          class="form-control"
+           id="jobtitle"
+            formControlName="designationInfo"
+             placeholder="Enter Job-Title"
+             [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['ExperienceInfo'].touched }">
+             <div *ngIf="resumeSubmitted || getAsFormGroup(exper).controls['designationInfo'].touched && getAsFormGroup(exper).controls['designationInfo']?.errors?.['required']" class="alert alert-danger">
+              Given Input is Invalid.
+            </div>
 
 
          <label for="jobdesc">Job-Description : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="jobdesc" formControlName="descriptionInfo" placeholder="Enter Job-Description"><br>
+         <input type="text"
+          class="form-control"
+           id="jobdesc"
+            formControlName="descriptionInfo"
+             placeholder="Enter Job-Description"
+             [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['ExperienceInfo'].touched }"/>
+             <div *ngIf="resumeSubmitted || getAsFormGroup(exper).controls['descriptionInfo'].touched && getAsFormGroup(exper).controls['descriptionInfo']?.errors?.['required']" class="alert alert-danger">
+              Given Input is Invalid.
+            </div>
 
 
          <label for="yearofj">Start Year : &nbsp; &nbsp;</label>
-         <input type="date" class="form-control" id="yearofj" formControlName="startYearinfo" placeholder="Enter the Start Year"><br>
+         <input type="date"
+          class="form-control"
+           id="yearofj"
+            formControlName="startYearinfo"
+             placeholder="Enter the Start Year"
+             [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['ExperienceInfo'].touched }">
+             <div *ngIf="resumeSubmitted || getAsFormGroup(exper).controls['startYearinfo'].touched && getAsFormGroup(exper).controls['startYearinfo']?.errors?.['required']" class="alert alert-danger">
+              Given Input is Invalid.
+            </div>
          <label for="yearofje">End Year : &nbsp; &nbsp;</label>
-         <input type="date" class="form-control" id="yearofe"  formControlName="EndYearinfo" placeholder="Enter the End Year"><br>
+         <input type="date"
+          class="form-control"
+           id="yearofe"
+             formControlName="EndYearinfo"
+              placeholder="Enter the End Year"
+              [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['ExperienceInfo'].touched }">
+              <div *ngIf="resumeSubmitted || getAsFormGroup(exper).controls['EndYearinfo'].touched && getAsFormGroup(exper).controls['EndYearinfo']?.errors?.['required']" class="alert alert-danger">
+                Given Input is Invalid.
+              </div><br>
         </div>
             <button type="button" (click)="addExp()" class="btn btn-primary">Add Experience</button>
             <button type="button" (click)="deleteExp(i)" class="btn btn-primary dskill">Delete Experience</button><br><br>
@@ -136,13 +170,37 @@
         <div [formGroupName]="i">
 
          <label for="uni">University/School Name : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="uni" formControlName="UniversityInfo" placeholder="Enter your University/school name"><br>
+         <input type="text"
+          class="form-control"
+           id="uni"
+            formControlName="UniversityInfo"
+             placeholder="Enter your University/school name"
+             [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['EducationInfo'].touched }">
+             <div *ngIf="resumeSubmitted || getAsFormGroup(education).controls['UniversityInfo'].touched && getAsFormGroup(education).controls['UniversityInfo']?.errors?.['required']" class="alert alert-danger">
+              Given Input is Invalid.
+            </div><br>
 
          <label for="uni">Degree : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="uni" formControlName="degree" placeholder="Enter your Degree name"><br>
+         <input type="text"
+          class="form-control"
+           id="uni"
+            formControlName="degree"
+             placeholder="Enter your Degree name"
+             [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['EducationInfo'].touched }">
+             <div *ngIf="resumeSubmitted || getAsFormGroup(education).controls['degree'].touched && getAsFormGroup(education).controls['degree']?.errors?.['required']" class="alert alert-danger">
+              Given Input is Invalid.
+            </div><br>
 
          <label for="uni">Grade : &nbsp; &nbsp;</label>
-         <input type="text" class="form-control" id="uni" formControlName="grade" placeholder="Enter your grades in CGPA."><br>
+         <input type="text"
+          class="form-control"
+           id="uni"
+            formControlName="grade"
+             placeholder="Enter your grades in CGPA."
+             [ngClass]="{ 'is-invalid': resumeSubmitted && getvalue['EducationInfo'].touched }">
+             <div *ngIf="resumeSubmitted || getAsFormGroup(education).controls['grade'].touched && getAsFormGroup(education).controls['grade']?.errors?.['required']" class="alert alert-danger">
+              Given Input is Invalid.
+            </div><br>
 
         </div>
         <button type="button" (click)="addEducation()" class="btn btn-primary">Add Education</button>
@@ -150,5 +208,5 @@
      </div><br>
 
     </div>
-    <button type="submit" class="btn btn-success d-flex submit" [disabled]="resumeform.invalid">Submit</button>
+    <button type="submit" class="btn btn-success d-flex submit">Submit</button>
   </form>
