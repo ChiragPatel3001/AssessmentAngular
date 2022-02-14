@@ -9,7 +9,12 @@ const routes: Routes = [
     path: 'crud',
     loadChildren: () => import('./crud/crud.module').then((m) => m.CrudModule)
   },
-  { path: 'resume', loadChildren: () => import('./modules/resumebuilder/resumebuilder.module').then(m => m.ResumebuilderModule) }
+  { path: 'resume',
+    loadChildren: () => import('./modules/resumebuilder/resumebuilder.module').then(m => m.ResumebuilderModule) },
+    
+  { path: 'management',
+    loadChildren: () => import('./Assessment/user-management/user-management.module').then(m => m.UserManagementModule) },
+ 
 ];
 
 @NgModule({

@@ -1,0 +1,56 @@
+.form-group{
+    margin: 10px 50px;
+}
+.parent-fgroup{
+    border: 1px solid #d4d4d4;
+    margin: 0px 20px;
+}
+.form-controls{
+    margin: 10px 10px;
+}
+input{
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    padding: 5px 0;
+}
+.formControls-1{
+    justify-content: center;
+    margin: 0;
+}
+.formControls-2{
+    justify-content: center;
+}
+.formActions{
+    justify-content: flex-end;
+}
+.save-user{
+    background-color: #06f;
+    color: white;
+    border: none;
+    padding: 6px 80px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    margin: 10px 5px;
+}
+.save-user:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.cancel-user{
+    background-color: #171f46;
+    color: white;
+    border: none;
+    padding: 6px 80px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    margin: 10px 5px;
+}
+.cancel-user:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.red-alert{
+    color: red;
+}

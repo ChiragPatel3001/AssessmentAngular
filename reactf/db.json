@@ -98,5 +98,39 @@
       ],
       "id": 1
     }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "name": "Apple"
+    },
+    {
+      "id": 2,
+      "name": ".JBL"
+    },
+    {
+      "id": 3,
+      "name": "1Rivet"
+    }
+  ],
+  "UserDetail": [
+    {
+      "id": 1,
+      "firstName": "Chirag",
+      "lastName": "Patel",
+      "clients": "Apple",
+      "emailId": "cp22afd0@gmail.com",
+      "contactno": "7871023474",
+      "office": "1Rivet"
+    },
+    {
+      "id": 3,
+      "firstName": "Neel",
+      "lastName": "Patel",
+      "clients": "Apple",
+      "emailId": "negluhfg0@gmail.com",
+      "contactno": "78435499874",
+      "office": "1Rivet"
+    }
   ]
 }
