@@ -1,11 +1,21 @@
-/* You can add global styles to this file, and also import other style files  */
+// Global styles goes here
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body,html{
     height: 100%;
     font-family: 'Roboto', sans-serif;
     background-color: #f7f8fa;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.d-flex{
+    display: flex;
 }
