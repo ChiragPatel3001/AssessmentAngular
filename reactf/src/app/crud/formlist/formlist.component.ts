@@ -5,7 +5,7 @@ import { CrudserveService } from '../services/crudserve.service';
 @Component({
   selector: 'app-formlist',
   templateUrl: './formlist.component.html',
-  styleUrls: ['./formlist.component.css']
+  styleUrls: ['./formlist.component.scss']
 })
 export class FormlistComponent implements OnInit {
   fromList: User[]

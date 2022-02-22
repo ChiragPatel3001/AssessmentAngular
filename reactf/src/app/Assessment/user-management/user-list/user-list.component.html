@@ -1,38 +1,9 @@
-<section class="d-flex user-nav">
-    <h1 class="user-title1">CLIENTS</h1>
-    <h1 class="user-title2">USERS</h1>
-</section>
-<section class="d-flex nav-title">
-    <div class="nav-title-element title-el1">
-        <h2 class="main-title">Users</h2>
-    </div>
-    <div class="nav-title-element d-flex title-el2">
-        <div><label for="clients">Client : </label>
-        <select name="clients" id="clients">
-            <option *ngFor="let myClient of Clients" [value]="myClient.id">
-                {{myClient.name}}
-            </option>
-        </select></div>
-        <div class="search-bar d-flex">
-            <input class="Search"
-             type="text"
-             placeholder="Search.."
-             name="search"
-             
-            >
-       </div>
-        <button class="Add-user" (click)="newUser()" [disabled]="formView"><span>+</span> NEW USER </button>
-    </div>
-</section>
-
-
-
 <div class="d-flex">
      </div>
-    <table class="table">
+    <table class="form-list">
         <thead>
             <tr>
-                <th scope="col">id</th>
+                <!-- <th scope="col">id</th> -->
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">ClientName</th>
@@ -44,7 +15,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let userData of UserList">
-                <td>{{userData.id}}</td>
+                <!-- <td>{{userData.id}}</td> -->
                 <td>{{userData.firstName}}</td>
                 <td>{{userData.lastName}}</td>
                 <td>{{userData.clients | clientpipe: Clients}}</td>

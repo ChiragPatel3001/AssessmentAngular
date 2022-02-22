@@ -9,7 +9,7 @@ import { CrudserveService } from '../services/crudserve.service';
 @Component({
   selector: 'app-formcrud',
   templateUrl: './formcrud.component.html',
-  styleUrls: ['./formcrud.component.css']
+  styleUrls: ['./formcrud.component.scss']
 })
 export class FormcrudComponent implements OnInit {
 

@@ -8,7 +8,6 @@ import { CrudModule } from './crud/crud.module';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
-import { NgxMaskModule } from 'ngx-mask';
 import { ResumebuilderModule } from './modules/resumebuilder/resumebuilder.module';
 
 
@@ -22,10 +21,9 @@ import { ResumebuilderModule } from './modules/resumebuilder/resumebuilder.modul
     AppRoutingModule,
     CoreModule, 
     CrudModule,
-    HttpClientModule,
     Ng2SearchPipeModule,
+    HttpClientModule,
     FormsModule,
-    NgxMaskModule,
     ResumebuilderModule
   ],
   providers: [],
