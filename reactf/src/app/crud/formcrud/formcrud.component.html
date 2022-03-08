@@ -1,4 +1,4 @@
-<form [formGroup]="FormValue" (ngSubmit)="onSubmit()">
+<form [formGroup]="FormValue">
     <legend>
         <h2>FORM :&nbsp;&nbsp; </h2>
     </legend><br>
@@ -78,7 +78,8 @@
             </option>
         </select><br><br>
 
-        <button type="submit" class="btn btn-primary me-2">Submit</button>
-        <button type="reset" class="btn btn-success">Reset</button>
+        <button type="submit" class="btn button" (click)="onSubmit()">Submit</button>
+        <button type="reset" class="btn button">Reset</button>
+        <button type="cancel" class="btn dangerbtn" (click)="onclose()">Cancel</button>
       
 </form>

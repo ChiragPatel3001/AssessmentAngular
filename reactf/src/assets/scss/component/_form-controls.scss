@@ -1,1 +1,11 @@
 // Form controls styles goes here
+.form{
+    background-color: $form-bgcolor;
+    
+    .parent-fgroup{
+        border: none;
+        .formControls-1{
+
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.test {
+  width: 75%;
+}
+
+.content {
+  overflow: auto;
+  width: 100%;
+}
+
+.contentmain {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  height: 100%;
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 15px;
+}
+
+.sidebar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 280px;
+          flex: 0 0 280px;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 100%;
+  background-color: white;
+}
+
+.outlet {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  z-index: 1000;
+  position: relative;
+}
+
+input {
+  display: none;
+}
+
+label {
+  font-size: 2.5rem;
+  left: 10px;
+  position: absolute;
+  color: #06f;
+}
+/*# sourceMappingURL=app.component.css.map */

@@ -9,7 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { ResumebuilderModule } from './modules/resumebuilder/resumebuilder.module';
-
+import {OverlayModule} from '@angular/cdk/overlay';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import { ResumebuilderModule } from './modules/resumebuilder/resumebuilder.modul
     Ng2SearchPipeModule,
     HttpClientModule,
     FormsModule,
-    ResumebuilderModule
+    ResumebuilderModule,
+    OverlayModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

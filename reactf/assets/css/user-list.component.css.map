@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../src/app/Assessment/user-management/user-list/user-list.component.scss"
+    ],
+    "names": [],
+    "file": "user-list.component.css"
+}

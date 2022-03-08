@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,MAAM,EAAE,SAAS;CACpB",
+    "sources": [
+        "../../src/app/crud/formlist/formlist.component.scss"
+    ],
+    "names": [],
+    "file": "formlist.component.css"
+}

@@ -33,38 +33,28 @@
       "contact": "7874543474",
       "gender": "male",
       "doe": "2022-01-03",
-      "dept": 1,
+      "dept": "1",
       "id": 1
     },
     {
       "firstname": "Abhishek",
       "lastname": "Patel",
       "email": "abhlohshake@gmail.com",
-      "contact": "8658555555",
+      "contact": "9292454578",
       "gender": "male",
-      "doe": "2022-01-03",
-      "dept": 1,
+      "doe": "2022-01-13",
+      "dept": "6",
       "id": 2
     },
     {
-      "firstname": "Neel",
-      "lastname": "Gajjar",
-      "email": "neelu123@gmail.com",
-      "contact": "9824776589",
+      "firstname": "Mehul",
+      "lastname": "patel",
+      "email": "mehulp23@gmail.com",
+      "contact": "8658756886",
       "gender": "male",
-      "doe": "2022-02-10",
-      "dept": 4,
-      "id": 4
-    },
-    {
-      "firstname": "Dummy",
-      "lastname": "girl",
-      "email": "dummygirl52@gmail.com",
-      "contact": "9292454575",
-      "gender": "female",
-      "doe": "2022-02-05",
-      "dept": 5,
-      "id": 5
+      "doe": "2022-02-28",
+      "dept": "5",
+      "id": 3
     }
   ],
   "resumeinfo": [

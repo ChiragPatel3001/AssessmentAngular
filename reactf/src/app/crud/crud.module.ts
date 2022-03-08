@@ -8,6 +8,7 @@ import { FormcrudComponent } from './formcrud/formcrud.component';
 import { FormlistComponent } from './formlist/formlist.component';
 import { DeptpipePipe } from './pipes/deptpipe.pipe';
 import { FormcrudfilterPipe } from './pipes/formcrudfilter.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormcrudfilterPipe } from './pipes/formcrudfilter.pipe';
     CrudRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   exports:[
   ]

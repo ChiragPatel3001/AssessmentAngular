@@ -1,0 +1,27 @@
+.table{
+    width: 100%;
+    margin: 80px 20px;
+    border-collapse: collapse;
+
+    .table-header{
+        background-color: $table-header-bgcolor;
+        color: $table-header-color;
+        
+        .table-headerRow{
+             
+            .header-element{
+                padding: 10px 0;
+            }
+        }
+    }
+
+    .table-body{
+        .table-bodyRow{
+            background-color: white;
+            .t-data-element{
+                text-align: center;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}

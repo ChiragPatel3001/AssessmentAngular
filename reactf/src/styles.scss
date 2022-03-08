@@ -2,12 +2,13 @@
 @import './assets/scss/base/index';
 @import './assets/scss/layout/index';
 @import './assets/scss/component/index';
+@import '@angular/cdk/overlay-prebuilt.css';
 
 #side-bar:checked ~ .sidebar{
     flex: 0 0 60px;
     // background-color: red;
-    
     .nav-link{
         transform: translateX(400px);
     }
+
 }
