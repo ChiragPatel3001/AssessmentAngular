@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TemplateoutletComponent } from './modules/ngTemplating/templating/templateoutlet/templateoutlet.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,10 @@ const routes: Routes = [
     
   { path: 'management',
     loadChildren: () => import('./Assessment/user-management/user-management.module').then(m => m.UserManagementModule) },
- 
+
+  { path: 'templateng', component: TemplateoutletComponent},
+  
+  { path: 'subjectcom', loadChildren: () => import('./modules/subject-com/subject-com.module').then(m => m.SubjectComModule) }
 ];
 
 @NgModule({

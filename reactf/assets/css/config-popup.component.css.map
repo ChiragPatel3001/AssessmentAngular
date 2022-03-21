@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAA;EACR,gBAAgB,EAAE,KAAK;EACvB,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,IAAI;CAChB",
+    "sources": [
+        "../../src/app/shared/config-popup/config-popup.component.scss"
+    ],
+    "names": [],
+    "file": "config-popup.component.css"
+}

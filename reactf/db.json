@@ -96,7 +96,7 @@
     },
     {
       "id": 2,
-      "name": ".JBL"
+      "name": "JBL"
     },
     {
       "id": 3,
@@ -112,15 +112,6 @@
       "clients": "3",
       "office": "1Rivet",
       "id": 7
-    },
-    {
-      "firstName": "Milan",
-      "lastName": "Buha",
-      "emailId": "milan5423@gmail.com",
-      "contactno": "9824776589",
-      "clients": "2",
-      "office": "Facebook",
-      "id": 8
     },
     {
       "firstName": "Mehul",

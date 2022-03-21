@@ -11,11 +11,14 @@ import { FormsModule } from '@angular/forms';
 import { ResumebuilderModule } from './modules/resumebuilder/resumebuilder.module';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { SharedModule } from './shared/shared.module';
+import { TemplatingModule } from './modules/ngTemplating/templating/templating.module';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { SharedModule } from './shared/shared.module';
     FormsModule,
     ResumebuilderModule,
     OverlayModule,
-    SharedModule
+    SharedModule,
+    TemplatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
