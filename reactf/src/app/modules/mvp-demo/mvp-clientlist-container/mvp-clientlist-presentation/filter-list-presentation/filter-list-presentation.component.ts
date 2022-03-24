@@ -14,7 +14,6 @@ export class FilterListPresentationComponent implements OnInit {
 
 
   @Output() public filter: EventEmitter<mvpclient>
-
   @Output() public onsubmit: EventEmitter<mvpclient>;
   @Output() public close: EventEmitter<any>;
   constructor(private filterlistservice: FilterListPresenterService) { 
@@ -33,7 +32,6 @@ export class FilterListPresentationComponent implements OnInit {
     this.close.emit();
   }
   public onSubmit(){
-    
     this.filterlistservice.onsubmit(this.filterForm);
   }
 }

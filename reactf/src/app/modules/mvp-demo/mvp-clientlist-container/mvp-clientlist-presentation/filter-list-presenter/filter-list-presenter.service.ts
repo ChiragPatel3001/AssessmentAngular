@@ -20,7 +20,6 @@ export class FilterListPresenterService {
    }
 
    onsubmit(mvpclient: FormGroup){
-    console.log("Helll");
     this.filterform.next(mvpclient.value)
   }
 

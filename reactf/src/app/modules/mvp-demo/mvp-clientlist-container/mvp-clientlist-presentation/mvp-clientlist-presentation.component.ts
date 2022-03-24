@@ -33,37 +33,49 @@ export class MvpClientlistPresentationComponent implements OnInit {
   onDelete(id: number) {
     this.mvpPresenter.ondelete(id);
   }
-  onEdit(id: number){
+  onEdit(id: number) {
     this.router.navigateByUrl(`mvp/edit/${id}`)
   }
-  filter(){
+  filter() {
     this.openOverlay();
   }
-  openOverlay(){
+  openOverlay() {
     const overlayref = this.overlay.create({
       hasBackdrop: true,
       positionStrategy: this.overlay
-      .position()
-      .global()
-      .centerHorizontally()
-      .right()
+        .position()
+        .global()
+        .centerHorizontally()
+        .right()
     });
 
     const component = new ComponentPortal(FilterListPresentationComponent);
     const componentRef = overlayref.attach(component);
 
-    componentRef.instance.filter.subscribe((filterRes)=>{
+    componentRef.instance.filter.subscribe((filterRes) => {
       this.filterData(filterRes)
       overlayref.detach();
     });
-    componentRef.instance.close.subscribe(()=>{
+    componentRef.instance.close.subscribe(() => {
       overlayref.detach();
     });
   }
 
-  filterData(fiters:any){
-    this._mvpList = this._mvpList.filter((item)=>{
-     return item.age == fiters.age
-    })
+  filterData(fiters: any) {
+    // console.log(fiters, " separate" , fiters.name)
+    if (!(fiters.age === "")) {
+      this._mvpList = this._mvpList.filter((item) => {
+        return item.age == fiters.age
+      })
+      // console.log(this._mvpList, "inside age")
+    }
+    if (!(fiters.name === "")) {
+      this._mvpList = this._mvpList.filter((item) => {
+        return item.name.toLowerCase().match(fiters.name.toLowerCase())
+      })
+      // console.log(this._mvpList, "inside name")
+    }
+
+
   }
 }
