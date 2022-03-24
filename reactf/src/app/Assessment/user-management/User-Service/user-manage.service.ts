@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { userDetails,client } from '../User-Model/user.model';
 
 @Injectable({
@@ -9,6 +9,7 @@ import { userDetails,client } from '../User-Model/user.model';
 })
 export class UserManageService {
   apilink: string
+  refreshData: Subject<boolean> = new Subject<boolean>();
   constructor(private http:HttpClient) { 
     this.apilink= environment.baseURL
   }
@@ -29,5 +30,11 @@ export class UserManageService {
   }
   editClientData(id:number, edittedData: userDetails):Observable<userDetails>{
     return this.http.put<userDetails>(`${this.apilink}/UserDetail/${id}`,edittedData)
+  }
+  listUpdated(){
+    this.refreshData.next(true);
+  }
+  getListUpdateStatus(){
+    return this.refreshData.asObservable();
   }
 }

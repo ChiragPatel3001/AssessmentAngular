@@ -1,0 +1,89 @@
+.sidebarComponent{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+    h1{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    h2{
+        font-size: 1.0rem;
+        font-weight: 600;
+    }
+    h3{
+        font-size: 0.80rem;
+        font-weight: 600;
+    }
+    
+
+    .logo-header{
+        width: 100%;
+        justify-content: flex-end;
+        padding: 23px 15px;
+        color: $primary;
+        border-bottom: 1px solid #d4d4d4;
+    }
+    .profile{
+        padding: 10px;
+        margin: 15px 0;
+        
+        .profileName{
+            padding: 0 30px;
+            color: black;
+        }
+        }
+
+        .feature-list{
+            padding: 10px;
+            margin: 10px 0;
+
+            .nav-list{
+            width: 100%;
+            padding: 0;
+
+            li{
+                display: flex;
+                overflow: hidden;
+                border-radius: 10px;
+                cursor: pointer;
+            
+            }
+            }
+        }
+        .nav-item{
+            flex-grow: 1;
+            margin: 5px 0;
+            padding: 5px 0;
+            align-items: center;
+
+            &:hover{
+                color: $primary;
+                background-color: #eaedfc;
+
+                .bx{
+                    color: $primary;
+                }
+                .nav-link{
+                    color: $primary;
+                }
+            }
+            
+            .bx{
+                padding: 0 10px;
+                font-size: 1.5rem;
+                color: #d4d4d4;
+
+                    .bx:hover{
+                             color: $primary;
+                             }
+                }
+
+            .nav-link{
+                padding: 0 30px;
+                transition: 3 s all;
+                font-weight: 600;
+            }
+        }
+}
+

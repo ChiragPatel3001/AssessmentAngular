@@ -1,2 +1,10 @@
-    <app-sidebar class="sidebar d-flex"></app-sidebar>
-    <router-outlet></router-outlet>
+<div class="wrapper d-flex">
+    <label for="side-bar"><i class='bx bx-menu-alt-left'></i></label>
+    <input type="checkbox" id="side-bar">
+    <div class="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="outlet">
+        <router-outlet></router-outlet>
+    </div>
+</div>

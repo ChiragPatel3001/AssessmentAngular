@@ -1,4 +1,54 @@
 {
+  "mvpUser": [
+    {
+      "name": "Mehul Patel",
+      "age": 100,
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Chirag Patel",
+      "age": 100,
+      "gender": "male"
+    },
+    {
+      "id": 4,
+      "name": "Abhishek Patel",
+      "age": 100,
+      "gender": "male"
+    },
+    {
+      "id": 5,
+      "name": "Hrishikesh Patel",
+      "age": 100,
+      "gender": "male"
+    },
+    {
+      "name": "Jainam Shah",
+      "age": 21,
+      "gender": "male",
+      "id": 6
+    },
+    {
+      "name": "sushil",
+      "age": 1000,
+      "gender": "male",
+      "id": 7
+    },
+    {
+      "name": "Chirag Patel",
+      "age": 100,
+      "gender": "male",
+      "id": 8
+    },
+    {
+      "name": "Chirag Patel",
+      "age": 22,
+      "gender": "male",
+      "id": 9
+    }
+  ],
   "department": [
     {
       "id": 1,
@@ -33,38 +83,28 @@
       "contact": "7874543474",
       "gender": "male",
       "doe": "2022-01-03",
-      "dept": 1,
+      "dept": "1",
       "id": 1
     },
     {
       "firstname": "Abhishek",
       "lastname": "Patel",
       "email": "abhlohshake@gmail.com",
-      "contact": "8658555555",
+      "contact": "9292454578",
       "gender": "male",
-      "doe": "2022-01-03",
-      "dept": 1,
+      "doe": "2022-01-13",
+      "dept": "6",
       "id": 2
     },
     {
-      "firstname": "Neel",
-      "lastname": "Gajjar",
-      "email": "neelu123@gmail.com",
-      "contact": "9824776589",
+      "firstname": "Mehul",
+      "lastname": "patel",
+      "email": "mehulp23@gmail.com",
+      "contact": "8658756886",
       "gender": "male",
-      "doe": "2022-02-10",
-      "dept": 4,
-      "id": 4
-    },
-    {
-      "firstname": "Dummy",
-      "lastname": "girl",
-      "email": "dummygirl52@gmail.com",
-      "contact": "9292454575",
-      "gender": "female",
-      "doe": "2022-02-05",
-      "dept": 5,
-      "id": 5
+      "doe": "2022-02-28",
+      "dept": "5",
+      "id": 3
     }
   ],
   "resumeinfo": [
@@ -106,7 +146,7 @@
     },
     {
       "id": 2,
-      "name": ".JBL"
+      "name": "JBL"
     },
     {
       "id": 3,
@@ -115,22 +155,31 @@
   ],
   "UserDetail": [
     {
-      "id": 1,
-      "firstName": "Chirag",
+      "firstName": "Chirag ",
       "lastName": "Patel",
-      "clients": "Apple",
-      "emailId": "cp22afd0@gmail.com",
-      "contactno": "7871023474",
-      "office": "1Rivet"
+      "emailId": "cp221740@gmail.com",
+      "contactno": "7874543474",
+      "clients": "3",
+      "office": "1Rivet",
+      "id": 7
     },
     {
-      "id": 3,
-      "firstName": "Neel",
+      "firstName": "Mehul",
       "lastName": "Patel",
-      "clients": "Apple",
-      "emailId": "negluhfg0@gmail.com",
-      "contactno": "78435499874",
-      "office": "1Rivet"
+      "emailId": "mehulp23@gmail.com",
+      "contactno": "9292454575",
+      "clients": "1",
+      "office": "Google",
+      "id": 9
+    },
+    {
+      "firstName": "Jinal",
+      "lastName": "Tandel",
+      "emailId": "jinu342@hotmail.com",
+      "contactno": "9845365784",
+      "clients": "1",
+      "office": "Tesla",
+      "id": 13
     }
   ]
 }

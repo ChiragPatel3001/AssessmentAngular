@@ -1,0 +1,9 @@
+<div class="container-fluid p-4">
+<div>
+    <app-mvp-clientlist-presentation
+    [mvpclientlist]="mvpclientlist$ | async"
+    (delete)="delete($event)"
+    >
+    </app-mvp-clientlist-presentation>
+</div>
+</div>

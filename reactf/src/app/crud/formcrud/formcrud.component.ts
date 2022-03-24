@@ -3,32 +3,39 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 import { ActivatedRoute, Router } from '@angular/router';
 import { Department, User } from '../Model/crud.model';
 import { CrudserveService } from '../services/crudserve.service';
+import { Input,Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 
 
 @Component({
   selector: 'app-formcrud',
   templateUrl: './formcrud.component.html',
-  styleUrls: ['./formcrud.component.css']
+  styleUrls: ['./formcrud.component.scss']
 })
 export class FormcrudComponent implements OnInit {
 
   FormValue: FormGroup;
   submitted= false;
-  id: number;
+  @Input() id?: number; 
   isAddMode: boolean= false;
   department: Department[]= [];
+  @Output() close: EventEmitter<Event>;
+  @Output() onsubmit: EventEmitter<Event>;
   constructor(private bob: FormBuilder, private crudserveService:CrudserveService, private router:Router, private route: ActivatedRoute ) { 
     this.FormValue = this.maarufunction();
+    this.close = new EventEmitter<Event>();
+    this.onsubmit = new EventEmitter<Event>();
   }
+  
 
   ngOnInit(): void {
     this.getdata();
     
-    this.id = this.route.snapshot.params['id'];
+    // this.id = this.route.snapshot.params['id'];
     this.isAddMode = !this.id;
     
-    if (!this.isAddMode) {
+    if (this.id) {
       debugger
       this.crudserveService.getId(this.id)
           .subscribe(x => this.FormValue.patchValue(x));
@@ -64,15 +71,18 @@ export class FormcrudComponent implements OnInit {
       return;
   }
       this.crudserveService.addData(this.FormValue.value).subscribe((res:User)=>{
-        this.router.navigate(['/crud/list']);
+        console.log('value updated')
+        this.onsubmit.emit(this.FormValue.value);
+        // this.router.navigate(['/crud/list']);
         
       })
   }
 
-  updateUser(){
+  updateUser(){if(this.id)
     this.crudserveService.editData(this.id,this.FormValue.value).subscribe((res:User)=>{
-      console.log( 'User Updated')
-      this.router.navigate(['/crud/list']);
+      console.log( 'User Updated');
+      this.onsubmit.emit(this.FormValue.value);
+      // this.router.navigate(['/crud/list']);
     })
   }
 
@@ -82,5 +92,9 @@ export class FormcrudComponent implements OnInit {
   } else {
       this.updateUser();
   }
+  }
+
+  onclose() {
+    this.close.emit();
   }
 }

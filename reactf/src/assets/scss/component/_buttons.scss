@@ -1,0 +1,56 @@
+// Button styles goes here
+.button {
+    background-color: #06f;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin: 0 10px;
+
+    .button:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+}
+.deletebutton {
+    background-color: rgb(172, 172, 172);
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin: 0 10px;
+    
+}
+.dangerbtn {
+    background-color: rgb(175, 0, 0);
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin: 0 10px;
+    
+}
+.deletebutton:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: rgb(170, 5, 5);
+}
+.button:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: rgb(2, 107, 139);
+}
+.dangerbtn:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: rgb(252, 53, 4);
+}
+.savebutton:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: green;
+}

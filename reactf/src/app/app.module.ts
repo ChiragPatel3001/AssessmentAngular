@@ -8,25 +8,30 @@ import { CrudModule } from './crud/crud.module';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
-import { NgxMaskModule } from 'ngx-mask';
 import { ResumebuilderModule } from './modules/resumebuilder/resumebuilder.module';
+import {OverlayModule} from '@angular/cdk/overlay';
+import { SharedModule } from './shared/shared.module';
+import { TemplatingModule } from './modules/ngTemplating/templating/templating.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule, 
     CrudModule,
-    HttpClientModule,
     Ng2SearchPipeModule,
+    HttpClientModule,
     FormsModule,
-    NgxMaskModule,
-    ResumebuilderModule
+    ResumebuilderModule,
+    OverlayModule,
+    SharedModule,
+    TemplatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

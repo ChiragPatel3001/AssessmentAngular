@@ -1,58 +1,27 @@
-<section class="d-flex user-nav">
-    <h1 class="user-title1">CLIENTS</h1>
-    <h1 class="user-title2">USERS</h1>
-</section>
-<section class="d-flex nav-title">
-    <div class="nav-title-element title-el1">
-        <h2 class="main-title">Users</h2>
-    </div>
-    <div class="nav-title-element d-flex title-el2">
-        <div><label for="clients">Client : </label>
-        <select name="clients" id="clients">
-            <option *ngFor="let myClient of Clients" [value]="myClient.id">
-                {{myClient.name}}
-            </option>
-        </select></div>
-        <div class="search-bar d-flex">
-            <input class="Search"
-             type="text"
-             placeholder="Search.."
-             name="search"
-             
-            >
-       </div>
-        <button class="Add-user" (click)="newUser()" [disabled]="formView"><span>+</span> NEW USER </button>
-    </div>
-</section>
-
-
-
 <div class="d-flex">
      </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">id</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">ClientName</th>
-                <th scope="col">E-mail</th>
-                <th scope="col">Office</th>
-                <th scope="col">Contact Number</th>
-                <th scope="col">Action</th>
+    <table class="table form-list">
+        <thead class="table-header">
+            <tr class="table-headerRow">
+                <th class="header-element">First Name</th>
+                <th class="header-element">Last Name</th>
+                <th class="header-element">ClientName</th>
+                <th class="header-element">E-mail</th>
+                <th class="header-element">Office</th>
+                <th class="header-element">Contact Number</th>
+                <th class="header-element">Action</th>
             </tr>
         </thead>
-        <tbody>
-            <tr *ngFor="let userData of UserList">
-                <td>{{userData.id}}</td>
-                <td>{{userData.firstName}}</td>
-                <td>{{userData.lastName}}</td>
-                <td>{{userData.clients | clientpipe: Clients}}</td>
-                <td>{{userData.emailId}}</td>
-                <td>{{userData.office}}</td>
-                <td>{{userData.contactno}}</td>
+        <tbody class="table-body">
+            <tr class="table-bodyRow" *ngFor="let userData of UserList">
+                <td class="t-data-element">{{userData.firstName}}</td>
+                <td class="t-data-element">{{userData.lastName}}</td>
+                <td class="t-data-element">{{userData.clients | clientpipe: Clients}}</td>
+                <td class="t-data-element">{{userData.emailId}}</td>
+                <td class="t-data-element">{{userData.office}}</td>
+                <td class="t-data-element">{{userData.contactno}}</td>
                 
-                <td>
+                <td class="t-data-element">
                     <button class="button savebutton" routerLink="/manage/edit/{{userData.id}}">Edit</button>
                     <button class="button deletebutton" (click)="deleteClientData(userData.id)">Delete</button>
                 </td>

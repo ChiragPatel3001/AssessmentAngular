@@ -5,15 +5,19 @@ import { UserManageService } from './User-Service/user-manage.service';
 @Component({
   selector: 'app-user-management',
   templateUrl: './user-management.component.html',
-  styleUrls: ['./user-management.component.css']
+  styleUrls: ['./user-management.component.scss']
 })
 export class UserManagementComponent implements OnInit {
   Clients : client[]= [];
-  constructor(private userservice: UserManageService) { }
+  formView : Boolean= false;
+  constructor(private userservice: UserManageService) {
+    this.getClient();
+   }
 
   ngOnInit(): void {
+    
   }
-  getdata(){
+  getClient(){
     return this.userservice.getclients().subscribe(
       (cruddata: client[])=> 
       {
@@ -21,4 +25,9 @@ export class UserManagementComponent implements OnInit {
       }
     )
   }
+  newUser(){
+    this.formView = !this.formView;
+    console.log(this.formView)
+  }
+  
 }

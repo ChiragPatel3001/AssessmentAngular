@@ -1,2 +1,28 @@
+<section class="d-flex user-nav">
+    <h1 class="user-title1">CLIENTS</h1>
+    <h1 class="user-title2">USERS</h1>
+</section>
+<section class="d-flex nav-title">
+    <div class="nav-title-element title-el1">
+        <h2 class="main-title">Users</h2>
+    </div>
+    <div class="nav-title-element d-flex title-el2">
+        <div><label for="clients">Client : </label>
+        <select name="clients" id="clients">
+            <option *ngFor="let myClient of Clients" [value]="myClient.id">
+                {{myClient.name}}
+            </option>
+        </select></div>
+        <div class="search-bar d-flex">
+            <input class="Search"
+             type="text"
+             placeholder="Search.."
+             name="search"
+             
+            >
+       </div>
+        <button class="Add-user" (click)="newUser()"><span>+</span> NEW USER </button>
+    </div>
+</section>
+<app-user-view [enabled]="formView"></app-user-view>
 <app-user-list></app-user-list>
-<app-user-view></app-user-view>

@@ -1,0 +1,17 @@
+// All the SCSS Variables goes here
+$primary-color: map-get($map: $theme-colors, $key: "primary");
+$danger-color: map-get($map: $theme-colors, $key: "danger");
+$border-color: map-get($map: $theme-colors, $key: "border");
+$light-text: map-get($map: $theme-colors, $key: "gray");
+
+$border-main: 1px solid $border-color;
+$border-radius: 8px;
+
+$header-height: 60px;
+
+//table
+$table-header-bgcolor: white;
+$table-header-color: #c8c9cb;
+
+//form
+$form-bgcolor: white;

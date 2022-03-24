@@ -1,33 +1,35 @@
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" *ngIf="enabled" class="form">
     <div class="form-group parent-fgroup">
         <div class="form-group formControls-1">
-
+            
             <input type="text" formControlName="firstName" placeholder="First name" class="form-controls" size="40" />
-            <div *ngIf="submitted && f['firstName'].invalid && f['firstName']?.errors?.['required']" class="red-alert">
+            <!-- <div *ngIf="submitted && f['firstName'].invalid && f['firstName']?.errors?.['required']" class="red-alert">
                 Given Input is Invalid.
-            </div>
+            </div> -->
 
             <input type="text" formControlName="lastName" placeholder="Last name" class="form-controls" size="40" />
-            <div *ngIf="submitted && f['lastName'].invalid && f['lastName']?.errors?.['required']" class="red-alert">
+            <!-- <div *ngIf="submitted && f['lastName'].invalid && f['lastName']?.errors?.['required']" class="red-alert">
                 Given Input is Invalid.
-            </div>
+            </div> -->
 
             <input type="text" formControlName="emailId" id="email" placeholder="Email" class="form-controls"
-                size="40" />
-            <div *ngIf="submitted || f['email'].invalid && f['email']?.errors?.['required']"
+            size="40" />
+            <!-- <div *ngIf="submitted || f['email'].invalid && f['email']?.errors?.['required']"
                 class="red-alert">Given Input is Invalid. </div>
             <div *ngIf="f['email'].errors && f['email'].invalid && f['email']?.errors?.['email']"
-                class="red-alert">Please, enter valid email address.</div>
-
+            class="red-alert">Please, enter valid email address.</div> -->
+            
             <input mask="(000) 000-0000" formControlName="contactno" id="contact" type="text"
-                placeholder="Primary Contact Number" class="form-controls" size="40">
-                <div *ngIf="submitted || f['contactno'].invalid && f['contactno']?.errors?.['required']" class="red-alert">
-                    Given Input is Invalid.
-                </div>
+            placeholder="Primary Contact Number" class="form-controls" size="40">
+            <!-- <div *ngIf="submitted || f['contactno'].invalid && f['contactno']?.errors?.['required']" class="red-alert">
+                Given Input is Invalid.
+            </div> -->
         </div>
 
         <div class=" d-flex form-group formControls-2">
 
+            
             <div><label for="clients">Client : </label>
                 <select name="clients" id="cleints" class="form-controls" formControlName="clients">
                     <option *ngFor="let myClient of Clients" [value]="myClient.id">
@@ -36,13 +38,13 @@
                 </select>
             </div>
             <input formControlName="office" id="office" type="text" placeholder="Office" class="form-group">
-            <div *ngIf="submitted || f['office'].touched && f['office']?.errors?.['required']" class="red-alert">
+            <!-- <div *ngIf="submitted || f['office'].touched && f['office']?.errors?.['required']" class="red-alert">
                 Given Input is Invalid.
-            </div>
+            </div> -->
         </div>
         <div class="form-group d-flex formActions">
             <button type="reset" class="cancel-user" (click)="reset()">Cancel</button>
-            <button type="submit" class="save-user" (click)="onSubmit()">Save</button>
+            <button type="submit" class="save-user">Save</button>
         </div>
     </div>
 </form>

@@ -1,0 +1,35 @@
+<div class="d-flex main-btn">
+     <!-- <div class="search-bar d-flex">
+          <input class="Search"
+           type="text"
+           placeholder="Search.."
+           name="search"
+           [(ngModel)]="searchText"
+          >
+     </div> -->
+     </div>
+    <table class="table">
+        <thead class="table-header">
+            <tr class="table-headerRow">
+                <th  class="header-element">id</th>
+                <th  class="header-element">Name</th>
+                <th  class="header-element">E-mail</th>
+                <th  class="header-element">Gender</th>
+                <th  class="header-element">Action</th>
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            <tr class="table-bodyRow" *ngFor="let subjectData of subjectList">
+                <td class="t-data-element">{{subjectData.id}}</td>
+                <td class="t-data-element">{{subjectData.name}}</td>
+                <td class="t-data-element">{{subjectData.email}}</td>
+                <td class="t-data-element">{{subjectData.gender}}</td>
+                
+                <td class="t-data-element">
+                    <button class="button" (click)="sendDataToEdit(subjectData)">Edit</button>
+                    <button class="deletebutton" (click)="deleteData(subjectData.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    

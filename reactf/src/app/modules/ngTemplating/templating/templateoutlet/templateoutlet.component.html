@@ -1,0 +1,44 @@
+<h3>Example 1:</h3>
+
+<ng-template #template1>
+    <p>This is our template. It will be displayed on the div *ngTemplateOutlet="myTemplateRef"</p>
+</ng-template>
+
+<p>The Template appears after this</p>
+
+<ng-container *ngTemplateOutlet="template1">
+    This text is not displayed
+</ng-container>
+
+<div *ngTemplateOutlet="template1">
+</div>
+
+
+<h3>Example 2: </h3>
+<ng-template let-value="value='Chirag'" #messageTemplate>
+    <p>Value Received from the Parent is <strong> {{value}} </strong></p>
+</ng-template>
+<ng-container *ngTemplateOutlet="messageTemplate">
+    This text is not displayed
+</ng-container>
+
+<ng-template let-value="value2" #messageTemplate2>
+    <p>Value Received from the Parent using ngTemplate Outlet Context is <strong> {{value}} </strong></p>
+</ng-template>
+<ng-container [ngTemplateOutlet]="messageTemplate2" 
+       [ngTemplateOutletContext] ="{value2:'1000'}">
+</ng-container>  
+
+<ng-template let-value="value='Buddyyyyyy'" #message3>
+    <p>Welcome <strong>{{value}}</strong></p>
+</ng-template>
+<ng-container [ngTemplateOutlet]="message3"></ng-container>
+
+
+<ng-template let-value="value" #messagetemplate4>
+    <p>
+        {{value}} Buddyyyyy.
+    </p>
+</ng-template>
+<ng-container *ngTemplateOutlet="messagetemplate4; context:{value:100}">
+</ng-container> 
