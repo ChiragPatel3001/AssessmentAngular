@@ -1,0 +1,34 @@
+<div class="container-fluid p-3" (delete)="($event)">
+<h1>
+    List of MVP-USERS
+</h1>
+<div class="d-flex justify-content-between">
+    <button class="btn btn-primary" routerLink="../add">Add User</button>
+    <button class="btn btn-primary" (click)="filter()">Filter</button>
+</div>
+
+</div>
+
+<table class="table caption-top border">
+    <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="align-middle" *ngFor="let c of mvpclientlist">
+              <td class="col">{{c.id}}</td>
+              <td class="col">{{c.name}}</td>
+              <td class="col">{{c.age}}</td>
+              <td class="col">{{c.gender}}</td>
+              <td class="col">
+                  <button class="btn btn-success" (click)="onEdit(c.id)">Edit</button>
+                  <button class="btn btn-danger ms-2" (click)="onDelete(c.id)">Delete</button>
+              </td>
+          </tr>
+      </tbody>
+</table>

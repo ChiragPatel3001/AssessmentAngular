@@ -4,21 +4,33 @@ import { TemplateoutletComponent } from './modules/ngTemplating/templating/templ
 
 const routes: Routes = [
   {
-    path:'',redirectTo:'crud',pathMatch:'full'
+    path: '', redirectTo: 'crud', pathMatch: 'full'
   },
   {
     path: 'crud',
     loadChildren: () => import('./crud/crud.module').then((m) => m.CrudModule)
   },
-  { path: 'resume',
-    loadChildren: () => import('./modules/resumebuilder/resumebuilder.module').then(m => m.ResumebuilderModule) },
-    
-  { path: 'management',
-    loadChildren: () => import('./Assessment/user-management/user-management.module').then(m => m.UserManagementModule) },
+  {
+    path: 'resume',
+    loadChildren: () => import('./modules/resumebuilder/resumebuilder.module').then(m => m.ResumebuilderModule)
+  },
 
-  { path: 'templateng', component: TemplateoutletComponent},
-  
-  { path: 'subjectcom', loadChildren: () => import('./modules/subject-com/subject-com.module').then(m => m.SubjectComModule) }
+  {
+    path: 'management',
+    loadChildren: () => import('./Assessment/user-management/user-management.module').then(m => m.UserManagementModule)
+  },
+
+  { path: 'templateng', component: TemplateoutletComponent },
+
+  {
+    path: 'subjectcom',
+    loadChildren: () => import('./modules/subject-com/subject-com.module').then(m => m.SubjectComModule)
+  },
+
+  {
+    path: 'mvp',
+    loadChildren: () => import('./modules/mvp-demo/mvp-demo.module').then(m => m.MvpDemoModule)
+  }
 ];
 
 @NgModule({

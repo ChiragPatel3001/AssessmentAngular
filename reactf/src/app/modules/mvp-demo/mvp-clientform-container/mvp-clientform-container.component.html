@@ -1,0 +1,7 @@
+<div class="container-fluid p-2">
+    <app-mvp-clientform-presentation
+    [editmvpClient]="editmvpClient$ | async" 
+    (submitData)="submitData($event)"
+    (edittedData)="edittedData($event)"
+    ></app-mvp-clientform-presentation>
+</div>
