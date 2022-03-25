@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './core/login/login.component';
 import { TemplateoutletComponent } from './modules/ngTemplating/templating/templateoutlet/templateoutlet.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'crud', pathMatch: 'full'
+    path: '', component: LoginComponent
   },
   {
     path: 'crud',

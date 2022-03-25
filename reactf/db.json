@@ -31,12 +31,6 @@
       "id": 6
     },
     {
-      "name": "sushil",
-      "age": 1000,
-      "gender": "male",
-      "id": 7
-    },
-    {
       "name": "Chirag Patel",
       "age": 100,
       "gender": "male",
@@ -98,12 +92,12 @@
     },
     {
       "firstname": "Mehul",
-      "lastname": "patel",
+      "lastname": "Patel",
       "email": "mehulp23@gmail.com",
       "contact": "8658756886",
       "gender": "male",
       "doe": "2022-02-28",
-      "dept": "5",
+      "dept": "3",
       "id": 3
     }
   ],
