@@ -1,0 +1,4 @@
+<div class="container-fluid">
+    <app-file-upload-presentation (fileUpload)="addFile($event)"></app-file-upload-presentation>
+    <app-file-list-presentation [fileList]="filesList$ | async" (delete)="ondelete($event)"></app-file-list-presentation>
+</div>

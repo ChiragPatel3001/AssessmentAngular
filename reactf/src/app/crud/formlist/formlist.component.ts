@@ -6,6 +6,7 @@ import { ViewContainerRef } from '@angular/core';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { FormcrudComponent } from '../formcrud/formcrud.component';
 import { ConfigPopupComponent } from 'src/app/shared/config-popup/config-popup.component';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 
 @Component({
@@ -81,5 +82,7 @@ export class FormlistComponent implements OnInit {
   editData(id: number){
      this.displayOverlay(id);
   }
-
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.fromList, event.previousIndex, event.currentIndex);
+  }
 }

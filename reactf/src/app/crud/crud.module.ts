@@ -9,6 +9,7 @@ import { FormlistComponent } from './formlist/formlist.component';
 import { DeptpipePipe } from './pipes/deptpipe.pipe';
 import { FormcrudfilterPipe } from './pipes/formcrudfilter.pipe';
 import { SharedModule } from '../shared/shared.module';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SharedModule } from '../shared/shared.module';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    DragDropModule
   ],
   exports:[
   ]

@@ -31,7 +31,8 @@ const routes: Routes = [
   {
     path: 'mvp',
     loadChildren: () => import('./modules/mvp-demo/mvp-demo.module').then(m => m.MvpDemoModule)
-  }
+  },
+  { path: 'fileUpload', loadChildren: () => import('./modules/uploadfiles/uploadfiles.module').then(m => m.UploadfilesModule) }
 ];
 
 @NgModule({

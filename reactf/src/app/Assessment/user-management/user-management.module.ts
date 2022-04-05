@@ -10,6 +10,7 @@ import { UserManageService } from './User-Service/user-manage.service';
 import { ClientpipePipe } from './Pipes/clientpipe.pipe';
 import { UserListComponent } from './user-list/user-list.component';
 import { SearchPipe } from './Pipes/search.pipe';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 
@@ -26,6 +27,7 @@ import { SearchPipe } from './Pipes/search.pipe';
     UserManagementRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    DragDropModule
   ],
   providers: [UserManageService]
 })

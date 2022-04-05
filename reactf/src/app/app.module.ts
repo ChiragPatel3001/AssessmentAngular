@@ -12,6 +12,7 @@ import { ResumebuilderModule } from './modules/resumebuilder/resumebuilder.modul
 import {OverlayModule} from '@angular/cdk/overlay';
 import { SharedModule } from './shared/shared.module';
 import { TemplatingModule } from './modules/ngTemplating/templating/templating.module';
+import{DragDropModule} from '@angular/cdk/drag-drop';
 
 
 
@@ -31,7 +32,8 @@ import { TemplatingModule } from './modules/ngTemplating/templating/templating.m
     ResumebuilderModule,
     OverlayModule,
     SharedModule,
-    TemplatingModule
+    TemplatingModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

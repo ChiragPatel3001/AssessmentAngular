@@ -11,6 +11,7 @@
       >
  </div>
  </div>
+ <div cdkDropListGroup>
 <table class="table">
     <thead class="table-header">
         <tr class="table-headerRow">
@@ -24,8 +25,8 @@
             <th  class="header-element">Action</th>
         </tr>
     </thead>
-    <tbody class="table-body">
-        <tr class="table-bodyRow" *ngFor="let formData of fromList | formcrudfilter: searchText">
+    <tbody class="table-body" cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+        <tr class="table-bodyRow" *ngFor="let formData of fromList | formcrudfilter: searchText" cdkDrag class="example-box">
             <td class="t-data-element">{{formData.id}}</td>
             <td class="t-data-element">{{formData.firstname + " " + formData.lastname}}</td>
             <td class="t-data-element">{{formData.email}}</td>
@@ -41,3 +42,4 @@
         </tr>
     </tbody>
 </table>
+</div>

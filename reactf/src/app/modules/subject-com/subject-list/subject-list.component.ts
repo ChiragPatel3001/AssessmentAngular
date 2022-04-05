@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 import { SubjectService } from '../subject.service';
 import { SubjectData } from '../subjectcom.model';
 
@@ -43,5 +44,9 @@ export class SubjectListComponent implements OnInit {
 
   deleteData(id: number) {
     this.subjectList.splice(this.subjectList.findIndex(dd => dd.id == id), 1);
+  }
+
+  simpleAlert(){
+    Swal.fire('Hello Buddy!');
   }
 }

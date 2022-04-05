@@ -24,17 +24,20 @@ export class UserViewComponent implements OnInit {
     this.getClient();
     this.userForm = this.userdata();
   }
-  
+
   ngOnInit(): void {
     this.getClient();
-    this.id = this.route.snapshot.params['id'];
-    this.isAddMode = !this.id;
+    this._userManageService.getDataToEdit().subscribe((res) => {
+      this.id = res.id;
+      this.userForm.patchValue(res);
+      this.isAddMode = !this.id;
+    });
 
-    if (!this.isAddMode) {
-      debugger
-      this._userManageService.getClientId(this.id)
-      .subscribe(x => this.userForm.patchValue(x));
-    }
+    // if (!this.isAddMode) {
+    //   debugger
+    //   this._userManageService.getClientId(this.id)
+    //     .subscribe(x => this.userForm.patchValue(x));
+    // }
 
   }
   userdata(): FormGroup {
@@ -64,6 +67,7 @@ export class UserViewComponent implements OnInit {
   updateClient() {
     this._userManageService.editClientData(this.id, this.userForm.value).subscribe((res: userDetails) => {
       console.log('Client Updated')
+      this._userManageService.sendEdittedData(res);
     })
   }
 
@@ -86,6 +90,8 @@ export class UserViewComponent implements OnInit {
   reset() {
     this.userForm.reset();
   }
+
+
 
 }
 

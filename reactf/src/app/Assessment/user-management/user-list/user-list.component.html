@@ -1,5 +1,4 @@
-<div class="d-flex">
-     </div>
+<div>
     <table class="table form-list">
         <thead class="table-header">
             <tr class="table-headerRow">
@@ -20,11 +19,41 @@
                 <td class="t-data-element">{{userData.emailId}}</td>
                 <td class="t-data-element">{{userData.office}}</td>
                 <td class="t-data-element">{{userData.contactno}}</td>
-                
+
                 <td class="t-data-element">
-                    <button class="button savebutton" routerLink="/manage/edit/{{userData.id}}">Edit</button>
+                    <button class="button savebutton" (click)="editData(userData)">Edit</button>
                     <button class="button deletebutton" (click)="deleteClientData(userData.id)">Delete</button>
                 </td>
             </tr>
         </tbody>
     </table>
+
+    <table class="table form-list mt-5">
+        <thead class="table-header">
+            <tr class="table-headerRow">
+                <th class="header-element">First Name</th>
+                <th class="header-element">Last Name</th>
+                <th class="header-element">ClientName</th>
+                <th class="header-element">E-mail</th>
+                <th class="header-element">Office</th>
+                <th class="header-element">Contact Number</th>
+                <th class="header-element">Action</th>
+            </tr>
+        </thead>
+        <tbody class="table-body" cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+            <tr class="table-bodyRow" *ngFor="let userData of UserList2" cdkDrag class="example-box">
+                <td class="t-data-element">{{userData.firstName}}</td>
+                <td class="t-data-element">{{userData.lastName}}</td>
+                <td class="t-data-element">{{userData.clients | clientpipe: Clients}}</td>
+                <td class="t-data-element">{{userData.emailId}}</td>
+                <td class="t-data-element">{{userData.office}}</td>
+                <td class="t-data-element">{{userData.contactno}}</td>
+
+                <td class="t-data-element">
+                    <!-- <button class="button savebutton" (click)="editData(userData)">Edit</button>
+                    <button class="button deletebutton" (click)="deleteClientData(userData.id)">Delete</button> -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
