@@ -1,0 +1,121 @@
+<p>test works!</p>
+<!-- <p>Select multiple elements using custom templates with checkboxes</p>
+
+<ng-select
+    [items]="people"
+    [multiple]="true"
+    bindLabel="name"
+    [closeOnSelect]="false"
+    bindValue="company"
+    [(ngModel)]="selectedPeople">
+    <ng-template ng-optgroup-tmp let-item="item" let-item$="item$" let-index="index">
+        <input id="item-{{index}}" type="checkbox" [ngModel]="item$.selected"/> {{item.gender | uppercase}}
+    </ng-template>
+    <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+        <input id="item-{{index}}" type="checkbox" [ngModel]="item$.selected"/> {{item.name}}
+    </ng-template>
+</ng-select>
+<br> -->
+<!-- <small>
+    {{selectedPeople | json}}
+</small> -->
+<!-- <div class="search-results" 
+    infinite-scroll 
+    [scrollWindow]="true"
+    (scrolled)="onScrollDown($event)" 
+    (scrolledUp)="onScrollUp($event)">
+
+      <div class="list-group">
+        <a class="list-group-item list-group-item-action" *ngFor="let i of listArray">
+          <p class="mb-1">{{i}} Item added on {{direction}}</p>
+        </a>
+      </div>
+
+</div> -->
+
+<!-- 
+<div class="container">
+  <div class="progress-container">
+    <div class="progress" id="progress"></div>
+    <div class="circles active">1</div>
+    <div class="circles">2</div>
+    <div class="circles">3</div>
+    <div class="circles">4</div>
+  </div>
+  <button class="btn" id="prev" disabled>Prev</button>
+  <button class="btn" id="next">Next</button>
+  </div> -->
+
+  <div class="progress-bar mt-5 px-4">
+    <div class="row g-0 justify-content-center">
+        <div class="col-3 progress-step" [ngClass]="{'finish':isFirstFormCompleted}">
+            <div class="progress-circle">
+                <p class="mb-0 d-flex align-item-center justify-content-center">1</p>
+            </div>
+        </div>
+        <div class="col-3 progress-step" [ngClass]="{'finish':isSecondCompleted}">
+            <div class="progress-circle">
+                <p class="mb-0 d-flex align-item-center justify-content-center">2</p>
+            </div>
+        </div>
+        <div class="col-3 progress-step" [ngClass]="{'finish':isSecondCompleted}">
+            <div class="progress-circle">
+                <p class="mb-0 d-flex align-item-center justify-content-center">3</p>
+            </div>
+        </div>
+   
+    </div>
+</div>
+
+<div class="progress-form p-5">
+    <div class="row">
+        <div class="col-4">
+            <div class="form-step-1" *ngIf="!isSecondForm && !isthirdForm">  
+                <form [formGroup]="firstForm">
+                    <div class="mb-3">    
+                        <label>First Name</label><br>
+                        <input formControlName="firstname" id="firstname" type="text" class="form-control user-input mt-3"
+                            placeholder="Enter your firstname">
+                    </div>
+                    <div class="mb-3">    
+                        <label>Last Name</label><br>
+                        <input formControlName="lastname" id="lastname" type="text" class="form-control user-input mt-3"
+                            placeholder="Enter your lastname">
+                    </div>
+                </form>    
+            </div>
+            <div class="form-step-2" *ngIf="isSecondForm">
+                <form [formGroup]="secondForm">
+                    <div class="mb-3">    
+                        <label>Email</label><br>
+                        <input formControlName="email" id="email" type="text" class="form-control user-input mt-3"
+                            placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">    
+                        <label>Address</label><br>
+                        <input formControlName="address" id="address" type="text" class="form-control user-input mt-3"
+                            placeholder="Enter your address">
+                    </div>
+                </form>    
+            </div>
+            <div class="form-step-2" *ngIf="isthirdForm && !isSecondForm ">
+                <form [formGroup]="thirdForm">
+                    <div class="mb-3">    
+                        <label>Position</label><br>
+                        <input formControlName="position" id="position" type="text" class="form-control user-input mt-3"
+                            placeholder="Enter your Position">
+                    </div>
+                </form>    
+            </div>
+            <div class="submit-button">
+                <button type="submit" class="btn btn-primary me-2" (click)="onPrevious()">Previous</button>
+                <button type="button" class="btn btn-success" (click)="onSubmit()">Next</button>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
+
+  

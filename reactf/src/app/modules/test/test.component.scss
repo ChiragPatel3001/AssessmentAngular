@@ -1,0 +1,37 @@
+
+.progress-step {
+  position: relative;
+  &::after{
+      position: absolute;
+          content: "";
+          width: 0%;
+          left: 30px;
+          top: 50%;
+          height: 2px;
+          background-color: aqua;
+          transition: all 0.5s;
+  }
+  &.finish {
+      &::after {
+          width: 90%;
+      }
+      .progress-circle{
+          border: 2px solid aqua;
+      }
+  }
+
+  &:last-child {
+      &::after {
+          position: absolute;
+          content: "";
+          width: 0%;
+      }
+  }
+  .progress-circle {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      border: 2px solid red;
+      transition: all 0.5s;
+  }
+}

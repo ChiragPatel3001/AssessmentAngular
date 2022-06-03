@@ -13,6 +13,8 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import { SharedModule } from './shared/shared.module';
 import { TemplatingModule } from './modules/ngTemplating/templating/templating.module';
 import{DragDropModule} from '@angular/cdk/drag-drop';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 
@@ -33,7 +35,9 @@ import{DragDropModule} from '@angular/cdk/drag-drop';
     OverlayModule,
     SharedModule,
     TemplatingModule,
-    DragDropModule
+    DragDropModule,
+    NgSelectModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

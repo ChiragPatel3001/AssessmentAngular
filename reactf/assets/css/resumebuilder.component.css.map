@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../../src/app/modules/resumebuilder/resumebuilder.component.scss"
-    ],
-    "names": [],
-    "file": "resumebuilder.component.css"
-}

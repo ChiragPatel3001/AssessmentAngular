@@ -3,6 +3,8 @@
 @import './assets/scss/layout/index';
 @import './assets/scss/component/index';
 @import '@angular/cdk/overlay-prebuilt.css';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
 
 #side-bar:checked ~ .sidebar{
     flex: 0 0 60px;
